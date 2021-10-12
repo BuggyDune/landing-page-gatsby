@@ -4,10 +4,29 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    menuLinks: [
+      {
+        name: `Home`,
+        link: `/`,
+      },
+      {
+        name: `About Us`,
+        link: `#about-us`,
+      },
+      {
+        name: `Contact`,
+        link: `#contact`,
+      },
+      {
+        name: `Free Template`,
+        link: `#free`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

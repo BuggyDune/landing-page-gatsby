@@ -2,21 +2,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+const Header = ({ siteTitle, menuLinks }) => (
+  <header className="absolute left-0 right-0 top-0">
+    <div className="container max-w-screen-xl mx-auto flex justify-between items-center p-5">
+      <h1>
         <Link
           to="/"
           style={{
@@ -27,6 +16,25 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div>
+          <nav>
+            <ul className="flex">
+              {menuLinks.map(link => (
+                <li
+                  key={link.name}
+                  style={{
+                    listStyleType: `none`,
+                    padding: `1rem`,
+                  }}
+                >
+                  <Link style={{ color: `white` }} to={link.link}>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
     </div>
   </header>
 )
