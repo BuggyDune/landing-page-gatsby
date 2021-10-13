@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HomeLogos from "../components/componentsHome/homeLogos"
 import HomeSkills from "../components/componentsHome/homeSkills"
+import HomeTeam from "../components/componentsHome/homeTeam"
+import HomeNewsletter from "../components/componentsHome/homeNewsletter"
 
 const IndexPage = () => (
   <Layout>
@@ -42,6 +44,7 @@ const IndexPage = () => (
             quality={100}
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
+            className="rounded-xl"
           />
         </div>
       </div>
@@ -71,37 +74,67 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-5 pt-20 pb-20">
-      <div className="md:w-6/12">
-        <StaticImage
-          src="../images/online-programming-course-featured-video.jpg"
-          quality={100}
-          formats={["auto", "webp", "avif"]}
-          alt="A Gatsby astronaut"
-          className="w-full rounded-xl"
-        />
-      </div>
-      <div className="my-10 z-10 md:w-6/12	pl-10 pr-24">
-        <span className="uppercase	">FEATURED COURSE</span>
-        <h2 className="text-4xl md:my-10 font-semibold">
-          Getting Started With Python 3 for Beginner
-        </h2>
-        <div>
-          <p className="font-bold mb-5">
-            Nibh enim nisi amet et nunc varius facilisis nulla non urna pulvinar
-            felis, faucibus id placerat.
-          </p>
-          <Link
-            className="py-1.5 px-6 text-base border-solid border-1 bg-blue-500 rounded-3xl text-white mr-3 hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out"
-            to="/"
-          >
-            Start Course
-          </Link>
+    <div className="md:bg-section-pattern bg-contain	bg-no-repeat bg-left-bottom">
+      <div className="container max-w-screen-xl bg-transparent mx-auto p-5 pt-20 pb-2">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-6/12">
+            <StaticImage
+              src="../images/online-programming-course-featured-video.jpg"
+              quality={100}
+              formats={["auto", "webp", "avif"]}
+              alt="A Gatsby astronaut"
+              className="w-full rounded-xl"
+            />
+          </div>
+          <div className="my-10 z-10 md:w-6/12	pl-20 pr-10 md:pr-24">
+            <span className="uppercase">
+              <span className="w-3.5 h-3.5 inline-block rounded-full bg-red-400 mr-2"></span>
+              FEATURED COURSE
+            </span>
+            <h2 className="text-4xl md:my-6 font-semibold">
+              Getting Started With Python 3 for Beginner
+            </h2>
+            <div>
+              <p className="font-bold mb-5">
+                Nibh enim nisi amet et nunc varius facilisis nulla non urna
+                pulvinar felis, faucibus id placerat.
+              </p>
+              <div className="flex my-10">
+                <div className="w-6/12">
+                  <div className="py-1">
+                    <span className="w-3.5 h-3.5 inline-block rounded-full bg-blue-400 mr-2"></span>
+                    Fundamental
+                  </div>
+                  <div className="py-1">
+                    <span className="w-3.5 h-3.5 inline-block rounded-full bg-blue-400 mr-2"></span>
+                    Input and output
+                  </div>
+                </div>
+                <div className="w-6/12">
+                  <div className="py-1">
+                    <span className="w-3.5 h-3.5 inline-block rounded-full bg-blue-400 mr-2"></span>
+                    Conditional branching
+                  </div>
+                  <div className="py-1">
+                    <span className="w-3.5 h-3.5 inline-block rounded-full bg-blue-400 mr-2"></span>
+                    8+ more lessons
+                  </div>
+                </div>
+              </div>
+              <Link
+                className="py-1.5 px-6 text-base border-solid border-1 bg-blue-500 rounded-3xl text-white mr-3 hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out"
+                to="/"
+              >
+                Start Course
+              </Link>
+            </div>
+          </div>
         </div>
+        <HomeSkills />
       </div>
     </div>
-
-    <HomeSkills />
+    <HomeTeam />
+    <HomeNewsletter/>
   </Layout>
 )
 

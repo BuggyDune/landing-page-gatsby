@@ -1,5 +1,9 @@
 import React from "react"
-import html5 from "../../images/icon03.svg"
+import html5 from "../../images/html5.svg"
+import css3 from "../../images/css3.svg"
+import JS from "../../images/JS.svg"
+import react from "../../images/react.svg"
+import nodejs from "../../images/node-js.svg"
 
 const allLogos = [
   {
@@ -9,38 +13,36 @@ const allLogos = [
   },
   {
     id: 2,
-    name: "js",
-    url: html5,
+    name: "CSS3",
+    url: css3,
   },
   {
     id: 3,
     name: "js",
-    url: html5,
+    url: JS,
   },
   {
     id: 4,
-    name: "js",
-    url: html5,
+    name: "react",
+    url: react,
   },
   {
     id: 5,
-    name: "js",
-    url: html5,
+    name: "node-js",
+    url: nodejs,
   },
 ]
 
 export default function HomeLogos() {
   return (
-    <div className="container max-w-screen-xl mx-auto block md:flex justify-between items-center p-5">
+    <div className="container max-w-screen-xl mx-auto block md:flex justify-between items-center p-5 py-16">
       {allLogos.map(logo => (
-        <div>
+        <div className="w-1/5">
           <img
             key={logo.id}
             src={logo.url}
-            quality={100}
-            formats={["auto", "webp", "avif"]}
             alt={logo.name}
-            className="w-40	mx-auto"
+            className="w-12 mx-auto"
           />
         </div>
       ))}
