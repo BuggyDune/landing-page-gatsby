@@ -8,6 +8,7 @@ import HomeLogos from "../components/componentsHome/homeLogos"
 import HomeSkills from "../components/componentsHome/homeSkills"
 import HomeTeam from "../components/componentsHome/homeTeam"
 import HomeNewsletter from "../components/componentsHome/homeNewsletter"
+import Button from "../components/shared/button"
 
 const IndexPage = () => (
   <Layout>
@@ -36,6 +37,9 @@ const IndexPage = () => (
             >
               View Course
             </Link>
+            <Button className="ml-4" onClick={() => console.log("aici")}>
+              <span>View Course</span>
+            </Button>
           </div>
         </div>
         <div className="md:w-2/4 w-full md:block hidden">
