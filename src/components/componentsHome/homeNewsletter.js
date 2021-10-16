@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Button } from "../shared/button"
 
 export default function HomeNewsletter() {
   return (
@@ -8,9 +8,7 @@ export default function HomeNewsletter() {
       <h2 className="text-white text-5xl font-bold py-6">
         All Access Membership
       </h2>
-      <Link className="py-1.5 px-6 text-base border-solid border-1 bg-blue-500 rounded-3xl text-white mr-3 hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out">
-        Subscribe
-      </Link>
+      <Button>Subscribe</Button>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -8,12 +7,12 @@ import HomeLogos from "../components/componentsHome/homeLogos"
 import HomeSkills from "../components/componentsHome/homeSkills"
 import HomeTeam from "../components/componentsHome/homeTeam"
 import HomeNewsletter from "../components/componentsHome/homeNewsletter"
-import Button from "../components/shared/button"
+import { Button, ButtonDashed } from "../components/shared/button"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <div className="main__section bg-hero-pattern h-full mx-auto flex items-center py-60 pb-2 md:pb-40">
+    <div className="main__section bg-hero-pattern bg-cover h-full mx-auto flex items-center py-60 pb-2 md:pb-40">
       <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-5">
         <div className="md:w-2/4 w-full pr-10 text-white">
           <span>ON-DEMAND COURSE</span>
@@ -25,21 +24,8 @@ const IndexPage = () => (
             aliquet ultrices eleifend enim enim lacus elit.
           </p>
           <div className="flex my-5">
-            <Link
-              className="py-1.5 px-6 text-base border-solid border-1 bg-blue-500 rounded-3xl text-white mr-3 hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out"
-              to="/"
-            >
-              Start Course
-            </Link>
-            <Link
-              className="py-1.5 px-6 text-base border-solid border-2 border-white-900 rounded-3xl text-white hover:border-yellow-400 transition duration-300 ease-in-out"
-              to="/"
-            >
-              View Course
-            </Link>
-            <Button className="ml-4" onClick={() => console.log("aici")}>
-              <span>View Course</span>
-            </Button>
+            <Button to="/">Start Course</Button>
+            <ButtonDashed>View Course</ButtonDashed>
           </div>
         </div>
         <div className="md:w-2/4 w-full md:block hidden">
@@ -78,7 +64,7 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div className="md:bg-section-pattern bg-contain	bg-no-repeat bg-left-bottom">
+    <div className="md:bg-section-pattern bg-contain bg-no-repeat bg-left-bottom">
       <div className="container max-w-screen-xl bg-transparent mx-auto p-5 pt-20 pb-2">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-6/12">
@@ -125,12 +111,7 @@ const IndexPage = () => (
                   </div>
                 </div>
               </div>
-              <Link
-                className="py-1.5 px-6 text-base border-solid border-1 bg-blue-500 rounded-3xl text-white mr-3 hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out"
-                to="/"
-              >
-                Start Course
-              </Link>
+              <Button>Start Course</Button>
             </div>
           </div>
         </div>
@@ -138,7 +119,7 @@ const IndexPage = () => (
       </div>
     </div>
     <HomeTeam />
-    <HomeNewsletter/>
+    <HomeNewsletter />
   </Layout>
 )
 

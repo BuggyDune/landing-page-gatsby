@@ -18,6 +18,10 @@ module.exports = {
         link: `#contact`,
       },
       {
+        name: `Blog`,
+        link: `/blog`,
+      },
+      {
         name: `Free Template`,
         link: `#free`,
       },
@@ -29,6 +33,31 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-styled-components',
     `gatsby-plugin-emotion`,
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: true,
+              showCaptions: true
+            }
+          },
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/blog`,
+        name: `blog`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,7 +66,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

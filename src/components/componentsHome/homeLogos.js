@@ -42,7 +42,7 @@ export default function HomeLogos() {
             key={logo.id}
             src={logo.url}
             alt={logo.name}
-            className="w-12 mx-auto"
+            className="w-12 mx-auto opacity-75 hover:opacity-100 transition duration-300 ease-in-out cursor-pointer"
           />
         </div>
       ))}
