@@ -14,22 +14,25 @@ export default function Blog({ data }) {
         <h1 className="text-white text-4xl">Blog</h1>
       </PageHeaders>
       <div className="container max-w-screen-xl mx-auto py-20">
-        <div className="flex flex-col md:flex-row">
+        <div className="grid md:grid-cols-2 gap-8 px-4">
           {posts.map(post => {
             const featuredimage = post.frontmatter.featured.src
             const featuredImageAlt = post.frontmatter.featured.alt
             return (
-              <article className="md:w-6/12 m-5 bg-white shadow-lg rounded-xl" key={post.id}>
-                <Img
-                  className="rounded-xl"
-                  fluid={featuredimage.childImageSharp.fluid}
-                  alt={featuredImageAlt}
-                />
-
+              <article className="bg-white shadow-lg rounded-xl" key={post.id}>
+                <Link to={post.fields.slug}>
+                  <Img
+                    className="rounded-xl"
+                    fluid={featuredimage.childImageSharp.fluid}
+                    alt={featuredImageAlt}
+                  />
+                </Link>
                 <div className="p-5">
-                  <h2 className="text-2xl font-bold">
-                    {post.frontmatter.title}
-                  </h2>
+                  <Link to={post.fields.slug}>
+                    <h2 className="text-2xl font-bold">
+                      {post.frontmatter.title}
+                    </h2>
+                  </Link>
 
                   <small>
                     {post.frontmatter.author} - {post.frontmatter.date}
@@ -56,7 +59,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(fromNow: true)
+          date(formatString: "MMMM DD, YYYY")
           title
           author
           featured {

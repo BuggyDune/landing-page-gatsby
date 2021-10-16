@@ -10,28 +10,29 @@ module.exports = {
         link: `/`,
       },
       {
-        name: `About Us`,
-        link: `#about-us`,
+        name: `Products`,
+        link: `#products`,
       },
       {
-        name: `Contact`,
-        link: `#contact`,
+        name: `Team`,
+        link: `#team`,
       },
+
       {
         name: `Blog`,
         link: `/blog`,
       },
       {
-        name: `Free Template`,
-        link: `#free`,
+        name: `Subscribe`,
+        link: `#subscribe`,
       },
     ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-styled-components",
     `gatsby-plugin-emotion`,
     "gatsby-plugin-sharp",
     {
@@ -45,11 +46,11 @@ module.exports = {
               maxWidth: 800,
               linkImagesToOriginal: false,
               sizeByPixelDensity: true,
-              showCaptions: true
-            }
+              showCaptions: true,
+            },
           },
-        ]
-      }
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

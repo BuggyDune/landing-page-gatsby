@@ -35,9 +35,9 @@ const allLogos = [
 
 export default function HomeLogos() {
   return (
-    <div className="container max-w-screen-xl mx-auto block md:flex justify-between items-center p-5 py-16">
+    <div className="container max-w-screen-xl mx-auto flex-wrap flex justify-between items-center p-5 py-16">
       {allLogos.map(logo => (
-        <div className="w-1/5">
+        <div className="w-2/4 md:w-1/5 py-2">
           <img
             key={logo.id}
             src={logo.url}

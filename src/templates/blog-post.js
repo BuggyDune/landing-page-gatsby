@@ -4,6 +4,7 @@ import PageHeaders from "../components/pageHeaders"
 import Layout from "../components/layout"
 import { Button } from "../components/shared/button"
 import Img from "gatsby-image"
+import Seo from "../components/seo"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -23,7 +24,7 @@ export default function BlogPost({ data }) {
           fluid={featuredimage.childImageSharp.fluid}
           alt={featuredImageAlt}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="post__content pt-10" dangerouslySetInnerHTML={{ __html: post.html }} />
         <Link className="mt-10 block" to="/blog">
           <Button>Back</Button>
         </Link>
@@ -31,6 +32,7 @@ export default function BlogPost({ data }) {
     </Layout>
   )
 }
+
 export const query = graphql`
   query BlogQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
