@@ -1,7 +1,7 @@
 import React from "react"
 import html5 from "../../images/html5.svg"
 import css3 from "../../images/css3.svg"
-import JS from "../../images/JS.svg"
+import JS from "../../images/js.svg"
 import react from "../../images/react.svg"
 import nodejs from "../../images/node-js.svg"
 
