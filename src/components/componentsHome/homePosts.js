@@ -42,6 +42,7 @@ const HomePosts = () => {
   const { allMarkdownRemark } = data
   return (
     <div className="container max-w-screen-xl mx-auto py-20">
+    <h2 class="text-4xl md:my-10 font-semibold md: ml-5 text-center">Latest posts</h2>
       <div className="grid md:grid-cols-3 gap-8">
         {allMarkdownRemark.edges.map(({ node }) => (
           <article className="bg-white shadow-lg rounded-xl">
